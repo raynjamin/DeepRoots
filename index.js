@@ -1,13 +1,16 @@
-	var express = require('express');
-	var app = express();
+var express = require('express');
+var app = express();
 
-	app.get('/', function (req, res) {
-		res.send('Hello.');
-	});
+app.set('views', './views');
+app.set('view engine', 'jade');
 
-	app.use(express.static('public'));
+app.get('/', function (req, res) {
+	res.render('index');
+});
 
-	var server = app.listen(3000, function () {
-		// var host = server.address().address;
-		// var port = server.address().port;
-	});
+app.use(express.static('public'));
+
+var server = app.listen(3000, function () {
+	// var host = server.address().address;
+	// var port = server.address().port;
+});
