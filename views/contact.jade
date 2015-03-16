@@ -26,34 +26,8 @@ block content
             strong
               | 3481 Melrose Place
               br
-              | Beverly Hills, CA 90210
+              | Beverly Hills, CA 90210 
         .clearfix
     .row
-      .box
-        .col-lg-12
-          hr
-          h2.intro-text.text-center
-            | Contact
-            strong form
-          hr
-          p
-            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, vitae, distinctio, possimus repudiandae cupiditate ipsum excepturi dicta neque eaque voluptates tempora veniam esse earum sapiente optio deleniti consequuntur eos voluptatem.
-          form(role='form')
-            .row
-              .form-group.col-lg-4
-                label Name
-                input.form-control(type='text')
-              .form-group.col-lg-4
-                label Email Address
-                input.form-control(type='email')
-              .form-group.col-lg-4
-                label Phone Number
-                input.form-control(type='tel')
-              .clearfix
-              .form-group.col-lg-12
-                label Message
-                textarea.form-control(rows='6')
-              .form-group.col-lg-12
-                input(type='hidden', name='save', value='contact')
-                button.btn.btn-default(type='submit') Submit
+      include ./partials/form.jade
   // /.container

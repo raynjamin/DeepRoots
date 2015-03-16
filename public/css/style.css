@@ -1,9 +1,17 @@
 body {
-	background-image: url('../img/lawn_chairs.jpg');
+  background-image: url('../img/lawn_chairs.jpg');
 }
 
 @media (min-width: 768px) {
-	.navigation {
-		margin-top: 10px;
-	}
+  .navigation {
+    margin-top: 10px;
+  }
+}
+
+.img-max-width {
+  max-width: 250px;
+}
+
+.center-text {
+	text-align: center;
 }

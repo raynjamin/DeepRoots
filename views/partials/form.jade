@@ -1,0 +1,44 @@
+.box
+  .col-lg-12
+    hr
+    h2.intro-text.text-center
+      | Request A
+      strong  Quote
+    hr
+    p.center-text
+      | Please fill out the form below and we'll contact you shortly about arranging an estimate.
+    form(role='form', method='post', action="/contact")
+      .row
+        .form-group.col-lg-6
+          label Name
+          input.form-control(type='text', name="Name")
+        .form-group.col-lg-6
+          label Email Address
+          input.form-control(type='email', name="Email")
+        .form-group.col-lg-6
+          label Phone Number
+          input.form-control(type='tel', name="Phone Number")
+        .form-group.col-lg-6
+          label Type of Service Requested
+          //- 1)Grass cut and trim
+          //- 2) Aerate your lawn
+          //- 3) Flower bed service
+          //- 4) Tree planting
+          //- 5) Hardscape projects
+          //- 6) Fertilization and Seeding
+          //- 7) weed control
+          select.form-control(name="Work Request Type")
+            option(val="Grass Cut") Grass cut and trim
+            option(val="Aeration") Lawn Aeration
+            option(val="Flower Bed") Flower Bed Care
+            option(val="Planting") Tree Planting
+            option(val="Hardscape") Hardscape Projects
+            option(val="Fertilization") Fertilization and Seeding
+            option(val="Weeds") Weed Control
+        .clearfix
+        .form-group.col-lg-12
+          label Message
+          textarea.form-control(rows='6')
+        .form-group.col-lg-12
+          input(type='hidden', name='save', value='contact')
+          button.btn.btn-default(type='submit') Submit
