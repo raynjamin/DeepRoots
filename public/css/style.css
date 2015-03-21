@@ -15,3 +15,7 @@ body {
 .center-text {
 	text-align: center;
 }
+
+.url-link {
+  font-size: .8em;
+}
