@@ -7,17 +7,17 @@
     hr
     p.center-text
       | Please fill out the form below and we'll contact you shortly about arranging an estimate.
-    form(role='form', method='post', action="/contact")
+    form(role='form', method='post', action="/contact", data-toggle="validator")
       .row
         .form-group.col-lg-6
           label Name
-          input.form-control(type='text', name="Name")
+          input.form-control(type='text', name="Name", required)
         .form-group.col-lg-6
           label Email Address
-          input.form-control(type='email', name="Email")
+          input.form-control(type='email', name="Email", required)
         .form-group.col-lg-6
           label Phone Number
-          input.form-control(type='tel', name="Phone Number")
+          input.form-control(type='tel', name="PhoneNumber", required)
         .form-group.col-lg-6
           label Type of Service Requested
           //- 1)Grass cut and trim
@@ -27,7 +27,8 @@
           //- 5) Hardscape projects
           //- 6) Fertilization and Seeding
           //- 7) weed control
-          select.form-control(name="Work Request Type")
+          select.form-control(name="RequestType", required)
+            option(val="") Select One
             option(val="Grass Cut") Grass cut and trim
             option(val="Aeration") Lawn Aeration
             option(val="Flower Bed") Flower Bed Care
@@ -38,7 +39,7 @@
         .clearfix
         .form-group.col-lg-12
           label Message
-          textarea.form-control(rows='6')
+          textarea.form-control(rows='6', name='Message', required)
         .form-group.col-lg-12
           input(type='hidden', name='save', value='contact')
           button.btn.btn-default(type='submit') Submit
