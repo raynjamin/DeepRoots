@@ -43,6 +43,10 @@ app.get('/', function (req, res) {
   res.render('index');
 });
 
+app.get('/gallery', function (req, res) {
+  res.render('gallery');
+});
+
 app.get('/about', function (req, res) {
   res.render('about');
 })
@@ -51,8 +55,17 @@ app.get('/contact', function (req, res) {
   res.render('contact');
 });
 
+app.get('/testimonials', function (req, res) {
+  res.render('testimonials');
+});
+
 app.post('/contact', function (req, res) {
-  mailContact(req.body.Name, req.body.Email, req.body.PhoneNumber, req.body.RequestType, req.body.Message);
+  if (req.body.ContactType === 'Testimonial') {
+    // do stuff.
+  } else {
+    mailContact(req.body.Name, req.body.Email, req.body.PhoneNumber, req.body.RequestType, req.body.Message);
+  }
+  
   res.render('contact');
 });
 

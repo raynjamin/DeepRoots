@@ -13,6 +13,8 @@ html(lang="en")
         link(href="css/business-casual.css", rel="stylesheet")
         //- Custom CSS
         link(href='css/style.css', rel='stylesheet')
+        link(href='css/ekko-lightbox.css', rel='stylesheet')
+        link(href='css/thumbnail-gallery.css', rel='stylesheet')
 
         //-  Fonts
         link(href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800', rel='stylesheet', type='text/css')
@@ -22,6 +24,7 @@ html(lang="en")
         //if lt IE 9
         script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
         script(src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
+        
     body      
       img.logo.img-responsive.container(src='img/logo.png')
       .address-bar(itemspec, itemtype="http://schema.org/LocalBusiness")
@@ -53,9 +56,13 @@ html(lang="en")
               a(href='/about') About
             li
               a(href='/contact') Contact
+            li
+              a(href='/gallery') Gallery
           // /.navbar-collapse
         // /.container
       block content
+      .page-banner 
+        span Hello, World!
       footer
         .container
           .row
@@ -67,7 +74,6 @@ html(lang="en")
       script(src='js/bootstrap.min.js')
       // Script to Activate the Carousel
       script(src='js/validator.js')
-      script.
-        $('.carousel').carousel({
-          interval: 5000 //changes the speed
-        })
+      script(src='js/ekko-lightbox.js')
+      script(src='js/script.js')
+      

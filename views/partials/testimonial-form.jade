@@ -1,0 +1,21 @@
+.box
+  .col-lg-12
+    hr
+    h2.intro-text.text-center
+      | Say Something
+      strong  Back
+    hr
+    p.center-text
+      | Enjoy your service? Let us know!
+    form(role='form', method='post', action="/contact", data-toggle="validator")
+      .row
+        input(type='hidden', name='ContactType', value='Testimonial')
+        .form-group.col-lg-6
+          label Name
+          input.form-control(type='text', name="Name", required)
+        .form-group.col-lg-12
+          label Message
+          textarea.form-control(rows='6', name='Message', required)
+        .form-group.col-lg-12
+          input(type='hidden', name='save', value='contact')
+          button.btn.btn-default(type='submit') Submit
