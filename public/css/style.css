@@ -1,8 +1,18 @@
 body {
   background-image: url('../img/lawn_chairs.jpg');
 }
+a.email {
+    color: #fff;
+    text-decoration: underline;
+}
 
 @media (min-width: 768px) {
+  .box ul.list-group {
+      float: right;
+      min-width: 300px;
+      margin: 5px;
+  }
+  
   .navigation {
     margin-top: 10px;
   }
